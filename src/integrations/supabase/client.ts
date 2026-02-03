@@ -4,8 +4,8 @@ import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
 // Get Supabase configuration from environment variables
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL?.trim();
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY?.trim();
 
 // Validate environment variables
 if (!SUPABASE_URL) {
